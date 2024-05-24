@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:GestureRecognizer;assembly=GestureRecognizer"
+             x:Class="GestureRecognizer.MainPage"
+             >
+
+    <AbsoluteLayout
+            Padding="0,0,0,0"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand">
+
+        <cv:CameraView
+                x:Name="cameraView"/>
+
+        <Label 
+                BackgroundColor="Black"
+                TextColor="White"
+                x:Name="predictionLabel"
+                Text="---"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"/>
+
+        <VerticalStackLayout 
+            x:Name="rightMenuLayout"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Spacing="5">
+
+            <Button
+                HeightRequest="50"
+                WidthRequest="50"
+                x:Name="switchCameraButton"
+                BackgroundColor="Black"
+                TextColor="White"
+                ImageSource="Resources/Images/camera_switch.png"
+                IsVisible="False"/>
+
+            <Button
+                HeightRequest="50"
+                WidthRequest="50"
+                x:Name="settingsButton"
+                BackgroundColor="Black"
+                TextColor="White"
+                ImageSource="Resources/Images/settings.png"
+                IsVisible="True"/>
+
+            <ActivityIndicator
+                HeightRequest="50"
+                WidthRequest="50"
+                x:Name="isBusyIndicator"
+                IsVisible="True"
+                IsRunning="False"
+                Color="#2B0B98"
+                />
+            
+        </VerticalStackLayout>
+
+    </AbsoluteLayout>
+
+</ContentPage>

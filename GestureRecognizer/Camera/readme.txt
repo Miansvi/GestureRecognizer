@@ -1,0 +1,1 @@
+﻿Исходный код камеры взят от https://github.com/hjam40/Camera.MAUI

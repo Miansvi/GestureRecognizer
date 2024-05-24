@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:GestureRecognizer;assembly=GestureRecognizer"
+             x:Class="GestureRecognizer.SettingsPage"
+             >
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"/>
+    </Shell.BackButtonBehavior>
+
+    <AbsoluteLayout
+            Padding="0,0,0,0"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand">
+        
+        <ActivityIndicator 
+                x:Name="acitivityIndicator" 
+                IsRunning="False" 
+                IsVisible="True" 
+                Color="#2B0B98"
+                HeightRequest="50"
+                WidthRequest="50"/>
+
+        <StackLayout
+            Padding="10">
+            <Label x:Name="header" Text="Используемая модель" />
+            <RadioButton x:Name="model16x4" GroupName="models" Content="MViTv2 16x4" Value ="MVITV2_16x4"/>
+            <RadioButton x:Name="model32x2" GroupName="models" Content="MViTv2 32x2" Value ="MVITV2_32x2"/>
+        </StackLayout>
+
+    </AbsoluteLayout>
+
+</ContentPage>
